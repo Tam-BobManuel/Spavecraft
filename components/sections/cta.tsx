@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { AnimateOnScroll } from '@/components/ui/animate-on-scroll'
@@ -8,12 +7,9 @@ export function CTA() {
   return (
     <section className="relative border-t border-orange-200/20 bg-gradient-to-b from-white to-orange-50/50 py-20 sm:py-32 lg:py-40 overflow-hidden">
       <div className="absolute inset-0">
-        <Image
-          src="/bg-cta.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-[0.12]"
-          sizes="100vw"
+        <div
+          className="w-full h-full opacity-[0.12] bg-cover bg-center"
+          style={{ backgroundImage: 'url(/bg-cta.jpg)' }}
         />
       </div>
       <Container>

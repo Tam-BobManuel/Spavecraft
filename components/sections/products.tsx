@@ -4,18 +4,15 @@ import { AnimateOnScroll } from '@/components/ui/animate-on-scroll'
 import { PRODUCTS } from '@/lib/constants'
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
 
 export function Products() {
   return (
     <section id="products" className="relative border-t border-orange-200/20 bg-gradient-to-b from-orange-50/50 to-white py-20 sm:py-32 lg:py-40 overflow-hidden">
       <div className="absolute inset-0">
-        <Image
+        <img
           src="/bg-products.jpg"
           alt=""
-          fill
-          className="object-cover opacity-[0.08]"
-          sizes="100vw"
+          className="w-full h-full object-cover opacity-[0.08]"
         />
       </div>
       <Container className="relative space-y-16">
@@ -36,12 +33,10 @@ export function Products() {
             >
               <div className="group relative overflow-hidden rounded-xl border border-orange-200/30 bg-white transition-all duration-500 hover:border-orange-300/50 hover:shadow-xl hover:shadow-orange-500/5">
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-orange-100 to-amber-50">
-                  <Image
+                  <img
                     src={product.image}
                     alt={product.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>

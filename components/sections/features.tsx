@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Container } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/section-header'
@@ -19,12 +18,9 @@ export function Features() {
   return (
     <section id="features" className="relative border-t border-orange-200/20 bg-white py-20 sm:py-32 lg:py-40 overflow-hidden">
       <div className="absolute inset-0">
-        <Image
-          src="/bg-features.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-[0.12]"
-          sizes="100vw"
+        <div
+          className="w-full h-full opacity-[0.12] bg-cover bg-center"
+          style={{ backgroundImage: 'url(/bg-features.jpg)' }}
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-orange-500/[0.02] to-transparent" />

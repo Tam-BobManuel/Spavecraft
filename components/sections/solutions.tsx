@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Container } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/section-header'
 import { AnimateOnScroll } from '@/components/ui/animate-on-scroll'
@@ -16,12 +15,9 @@ export function Solutions() {
   return (
     <section id="solutions" className="relative border-t border-orange-200/20 bg-gradient-to-b from-orange-50/50 to-white py-20 sm:py-32 lg:py-40 overflow-hidden">
       <div className="absolute inset-0">
-        <Image
-          src="/bg-solutions.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-[0.08]"
-          sizes="100vw"
+        <div
+          className="w-full h-full opacity-[0.08] bg-cover bg-center"
+          style={{ backgroundImage: 'url(/bg-solutions.jpg)' }}
         />
       </div>
       <Container className="relative space-y-16">

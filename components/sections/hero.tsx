@@ -3,7 +3,6 @@ import { Container } from '@/components/ui/container'
 import { AnimateOnScroll } from '@/components/ui/animate-on-scroll'
 import { HERO_CONTENT } from '@/lib/constants'
 import { ArrowRight, Play } from 'lucide-react'
-import Image from 'next/image'
 
 export function Hero() {
   return (
@@ -58,13 +57,10 @@ export function Hero() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-2xl blur-3xl" />
             <div className="relative rounded-2xl overflow-hidden border border-orange-200/30 bg-white/50 shadow-xl shadow-orange-500/5">
-              <Image
+              <img
                 src="/hero-tech.jpg"
                 alt="Spavecraft technology illustration"
-                width={600}
-                height={500}
                 className="w-full h-auto object-cover"
-                priority
               />
             </div>
           </div>
